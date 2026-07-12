@@ -1,6 +1,0 @@
-ID	CODE_GENDER	FLAG_OWN_CAR	FLAG_OWN_REALTY	CNT_CHILDREN	AMT_INCOME_TOTAL	NAME_INCOME_TYPE	NAME_EDUCATION_TYPE	NAME_FAMILY_STATUS	NAME_HOUSING_TYPE	DAYS_BIRTH	DAYS_EMPLOYED	FLAG_MOBIL	FLAG_WORK_PHONE	FLAG_PHONE	FLAG_EMAIL	OCCUPATION_TYPE	CNT_FAM_MEMBERS
-1	M	Y	Y	0	200000	Working	Higher education	Married	House / apartment	-12000	-300	Y	N	Y	N	Engineer	3
-2	F	N	Y	1	150000	Commercial associate	Secondary / secondary special	Single	House / apartment	-15000	-500	Y	Y	N	N		2
-3	M	Y	N	2	180000	State servant	Higher education	Married	With parents	-13000	-1000	Y	N	Y	N	Doctor	4
-4	F	N	N	0	120000	Pensioner	Secondary / secondary special	Separated	House / apartment	-16000	-200	Y	N	N	N		1
-5	M	Y	Y														
