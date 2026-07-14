@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Credit Card Approval Prediction | Apex Banking</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container" style="max-width: 800px; text-align: center;">
+        <i class="fa-solid fa-credit-card" style="font-size: 75px; color: var(--secondary); margin-bottom: 20px; filter: drop-shadow(0 0 15px rgba(6, 182, 212, 0.4));"></i>
+
+        <h1 class="title">Apex Credit Evaluation System</h1>
+        
+        <p class="subtitle">
+            Leverage advanced Machine Learning models to instantly analyze applicant profile parameters and predict credit approval outcomes with high precision.
+        </p>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fa-solid fa-brain"></i>
+                <div>
+                    <h3>Decision Tree Engine</h3>
+                    <p>Uses an optimized Decision Tree Classifier trained on historical applicant credit profiles.</p>
+                </div>
+            </div>
+            
+            <div class="feature-card">
+                <i class="fa-solid fa-bolt"></i>
+                <div>
+                    <h3>Real-time Evaluation</h3>
+                    <p>Instant application scoring and instant approval feedback under 2 seconds.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-user-shield"></i>
+                <div>
+                    <h3>Detailed Profiling</h3>
+                    <p>Analyzes financial backgrounds, demographics, and contact accessibility records.</p>
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <i class="fa-solid fa-circle-nodes"></i>
+                <div>
+                    <h3>Confidence Analysis</h3>
+                    <p>Returns transparency metrics showing the probability of approval vs. rejection.</p>
+                </div>
+            </div>
+        </div>
+
+        <br><br>
+
+        <a href="/predict">
+            <button class="predict-btn" style="width: 280px; font-size: 1.1rem; height: 54px;">
+                <i class="fa-solid fa-square-poll-vertical"></i> Start Evaluation Form
+            </button>
+        </a>
+    </div>
+</body>
+
+</html>

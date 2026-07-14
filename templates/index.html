@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Evaluation | Credit Approval System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>
+            <i class="fa-solid fa-credit-card"></i> Credit Card Eligibility Assessment
+        </h1>
+        <p class="subtitle">Fill out the applicant details below to run our Decision Tree prediction model.</p>
+
+        <form action="/result" method="POST">
+            
+            <!-- Personal Information -->
+            <div class="section-title">
+                <i class="fa-solid fa-user"></i> Personal Information
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-venus-mars"></i> Gender</label>
+                <select name="gender" required>
+                    <option value="" selected disabled>Select Gender</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-calendar-days"></i> Age (Years)</label>
+                <input type="number" name="age" min="18" max="100" placeholder="Enter Age" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-baby"></i> Number of Children</label>
+                <input type="number" name="children" min="0" max="20" placeholder="Number of Children" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-users"></i> Family Members</label>
+                <input type="number" name="family_members" min="1" max="25" placeholder="Total Family Members" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-car"></i> Owns a Car</label>
+                <select name="car" required>
+                    <option value="" selected disabled>Select Option</option>
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-house-chimney"></i> Owns Real Estate</label>
+                <select name="reality" required>
+                    <option value="" selected disabled>Select Option</option>
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-building"></i> Housing Style</label>
+                <select name="housing" required>
+                    <option value="" selected disabled>Select Housing</option>
+                    <option value="House / apartment">House / Apartment</option>
+                    <option value="Rented apartment">Rented Apartment</option>
+                    <option value="With parents">With Parents</option>
+                    <option value="Municipal apartment">Municipal Apartment</option>
+                    <option value="Office apartment">Office Apartment</option>
+                    <option value="Co-op apartment">Co-op Apartment</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-heart"></i> Relationship Status</label>
+                <select name="family_status" required>
+                    <option value="" selected disabled>Select Status</option>
+                    <option value="Married">Married</option>
+                    <option value="Single / not married">Single / Not Married</option>
+                    <option value="Civil marriage">Civil Marriage</option>
+                    <option value="Separated">Separated</option>
+                    <option value="Widow">Widow</option>
+                </select>
+            </div>
+
+            <!-- Financial Information -->
+            <div class="section-title">
+                <i class="fa-solid fa-wallet"></i> Financial Information
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-indian-rupee-sign"></i> Annual Income</label>
+                <input type="number" name="income" min="0" placeholder="Annual Income (INR)" required>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-briefcase"></i> Employment Category</label>
+                <select name="income_type" required>
+                    <option value="" selected disabled>Select Income Type</option>
+                    <option value="Working">Working</option>
+                    <option value="Commercial associate">Commercial Associate</option>
+                    <option value="Pensioner">Pensioner</option>
+                    <option value="State servant">State Servant</option>
+                    <option value="Student">Student</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-graduation-cap"></i> Education Level</label>
+                <select name="education" required>
+                    <option value="" selected disabled>Select Education</option>
+                    <option value="Higher education">Higher Education</option>
+                    <option value="Secondary / secondary special">Secondary / Secondary Special</option>
+                    <option value="Incomplete higher">Incomplete Higher</option>
+                    <option value="Lower secondary">Lower Secondary</option>
+                    <option value="Academic degree">Academic Degree</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-business-time"></i> Years Employed</label>
+                <input type="number" name="employed" min="0" max="60" placeholder="Years Employed" required>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="section-title">
+                <i class="fa-solid fa-address-book"></i> Contact Channels
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-phone-volume"></i> Provided Work Phone</label>
+                <select name="work_phone" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fa-solid fa-phone"></i> Provided Personal Phone</label>
+                <select name="phone" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <div class="form-group" style="grid-column: 1 / 3;">
+                <label><i class="fa-solid fa-envelope"></i> Provided Email Address</label>
+                <select name="email" required>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="button-box">
+                <button type="submit">
+                    <i class="fa-solid fa-gears"></i> Calculate Eligibility
+                </button>
+                <button type="reset">
+                    <i class="fa-solid fa-trash-can"></i> Reset Form
+                </button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
